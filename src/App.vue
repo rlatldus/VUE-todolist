@@ -3,7 +3,7 @@
     <TodoHeader></TodoHeader>
     <TodoInput></TodoInput>
     <TodoList></TodoList>
-    <TodoFooter ></TodoFooter>
+    <TodoFooter></TodoFooter>
   </div>
 </template>
 
@@ -15,21 +15,37 @@ import TodoFooter from "./components/TodoFooter.vue";
 
 export default {
   components: {
-    'TodoHeader': TodoHeader,
-    'TodoInput': TodoInput,
-    'TodoList' : TodoList,
-    'TodoFooter' : TodoFooter,
+    TodoHeader: TodoHeader,
+    TodoInput: TodoInput,
+    TodoList: TodoList,
+    TodoFooter: TodoFooter,
   },
 };
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f8;
+  font-size: 20px;
+}
+
+.shadow {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
+}
+
+ul{
+  padding-left: 0;
+}
+
 #app {
+  text-align: center;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
