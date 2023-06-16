@@ -1,36 +1,44 @@
 <template>
   <section>
     <ul>
-      <li v-for="todoItem in todoItems" class="shadow"  :key="todoItem.id">
-        <i class="fa-solid fa-square-check"></i>
+      <li
+        v-for="(todoItem, index) in propsdata"
+        class="shadow"
+        :key="todoItem.id"
+      >
+        <i class="checkBtn fa fa-check" aria-hidden="true"></i>
         {{ todoItem }}
-        <i class="fa-solid fa-trash-can"></i>
-    </li>
+        <span
+          class="removeBtn"
+          type="button"
+          @click="removeTodo(todoItem, index)"
+        >
+          <i class="trash fa-solid fa-trash-can"></i>
+        </span>
+      </li>
     </ul>
   </section>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      todoItems: [],
-    };
-  },
-  created() {
-    if (localStorage.length > 0) {
-      for (var i = 0; i < localStorage.length; i++) {
-        this.todoItems.push(localStorage.key(i));
-      }
-    }
+  props:['propsdata'],
+  methods: {
+    removeTodo(todoItem, index) {
+      this.$emit('removeTodo',todoItem,index)
+    },
   },
 };
 </script>
 
 <style scoped>
 li {
+  justify-content: space-between;
+  display: flex;
   list-style: none;
-  padding-top: 10px;
-
+  padding: 10px;
+}
+.trash{
+  cursor: pointer;
 }
 </style>
