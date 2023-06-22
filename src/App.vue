@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <TodoHeader></TodoHeader>
-    <TodoInput v-on:addTodo="addTodo" ></TodoInput>
-    <TodoList v-bind:propsdata="todoItems"  @removeTodo="removeTodo"></TodoList>
+    <TodoInput v-on:addTodo="addTodo"></TodoInput>
+    <TodoList v-bind:propsdata="todoItems" @removeTodo="removeTodo"></TodoList>
     <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
   </div>
 </template>
@@ -16,21 +16,21 @@ import TodoFooter from "./components/TodoFooter.vue";
 export default {
   data() {
     return {
-      todoItems: [],
+      todoItems: []
     };
   },
-  methods:{
-    addTodo(todoItem){
-      localStorage.setItem(todoItem,todoItem);
-      this.todoItems.push(todoItem)
+  methods: {
+    addTodo(todoItem) {
+      localStorage.setItem(todoItem, todoItem);
+      this.todoItems.push(todoItem);
     },
     removeTodo: function(todoItem, index) {
-  localStorage.removeItem(todoItem);
-  this.todoItems.splice(index, 1);
-},
-    clearAll(){
+      localStorage.removeItem(todoItem);
+      this.todoItems.splice(index, 1);
+    },
+    clearAll() {
       localStorage.clear();
-      this.todoItems=[];
+      this.todoItems = [];
     }
   },
   created() {
@@ -45,7 +45,7 @@ export default {
     TodoHeader: TodoHeader,
     TodoInput: TodoInput,
     TodoList: TodoList,
-    TodoFooter: TodoFooter,
+    TodoFooter: TodoFooter
   }
 };
 </script>
@@ -62,7 +62,7 @@ body {
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
 }
 
-ul{
+ul {
   padding-left: 0;
 }
 
@@ -74,5 +74,4 @@ ul{
   color: #2c3e50;
   margin-top: 60px;
 }
-
 </style>

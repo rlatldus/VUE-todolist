@@ -22,12 +22,12 @@
 
 <script>
 export default {
-  props:['propsdata'],
+  props: ["propsdata"],
   methods: {
     removeTodo(todoItem, index) {
-      this.$emit('removeTodo',todoItem,index)
-    },
-  },
+      this.$emit("removeTodo", todoItem, index);
+    }
+  }
 };
 </script>
 
@@ -38,7 +38,7 @@ li {
   list-style: none;
   padding: 10px;
 }
-.trash{
+.trash {
   cursor: pointer;
 }
 </style>
