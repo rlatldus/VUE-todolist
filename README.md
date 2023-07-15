@@ -1,6 +1,6 @@
 # Vue TODO list
 간단한 DOTO리스트를 작성할 수 있는 앱<br />
-- **`Project duration` :** 2023.03.13 - 2023.04.14
+- **`Project duration` :** 2023.06.01 - 2023.06.05
 - **`Team members` :** 김시연
 - **`Link` :** [Todo list 방문하기](https://rlatldus.github.io/VUE-todolist/)
 
