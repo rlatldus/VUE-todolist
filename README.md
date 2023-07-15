@@ -4,6 +4,8 @@
 - **`Team members` :** 김시연
 - **`Link` :** [Todo list 방문하기](https://rlatldus.github.io/VUE-todolist/)
 
+![image](https://github.com/rlatldus/VUE-todolist/assets/122216298/479b0ce9-1c6b-450a-8b73-b88e30ae31d3)
+
 
 # vues
 
